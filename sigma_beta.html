@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <style>
+    
+        body {
+          background-image: url('sigma_1.jpg');
+          width: 800px;
+          height: 300px;
+          background-repeat: no-repeat;
+
+          background-size: cover;
+        }
+      
+   
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+    
+    .login-container {
+      width: 300px;
+      padding: 20px;
+      border: 6px solid #bb1414;
+      border-radius: 50px;
+      background-color: #f2f2f2;
+    }
+    
+    .login-container label {
+      display: block;
+      margin-bottom: 100px;
+    }
+    
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 11px;
+      margin-bottom: 11px;
+    }
+    
+    .login-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #7b028a;
+      color: rgb(226, 226, 226);
+      border: blue;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="login-form">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("login-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent form submission
+      
+      // Get the entered username and password
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+      
+      // Check if the entered username and password are correct
+      if (username === "monkey" && password === "fn") {
+        // Redirect to a different HTML page
+        window.location.href = "https://amtifai2020.github.io/sigma_george.github.io/";
+      } else {
+        alert("Invalid username or password. Please try again.");
+      }
+    });
+  </script>
+  
+</body>
+</html>
